@@ -1,0 +1,79 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS D:\Rishith\PES> python
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+PS D:\Rishith\PES> python --version
+Python 3.11.5
+PS D:\Rishith\PES> sudo apt update
+sudo : The term 'sudo' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or
+if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ sudo apt update
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (sudo:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Rishith\PES> python
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 3+3+4+3323+24+3242343243242+6454535+675463+535345666+875463+45435
+3242886643161
+>>> import math
+>>> math.factorial(55)
+12696403353658275925965100847566516959580321051449436762275840000000000000
+>>> 3/2
+1.5
+>>> math.factorial(60)
+8320987112741390144276341183223364380754172606361245952449277696409600000000000000
+>>> math.factorial(90)
+1485715964481761497309522733620825737885569961284688766942216863704985393094065876545992131370884059645617234469978112000000000000000000000
+>>> 3//2
+1
+>>> man man
+  File "<stdin>", line 1
+    man man
+        ^^^
+SyntaxError: invalid syntax
+>>> man
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'man' is not defined. Did you mean: 'max'?
+>>> help()
+
+Welcome to Python 3.11's help utility!
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the internet at https://docs.python.org/3.11/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type "quit".
+
+To get a list of available modules, keywords, symbols, or topics, type
+"modules", "keywords", "symbols", or "topics".  Each module also comes
+with a one-line summary of what it does; to list the modules whose name
+or summary contain a given string such as "spam", type "modules spam".
+
+help> quit
+
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type "help(object)".  Executing "help('string')"
+has the same effect as typing a particular string at the help> prompt.
+>>> 123456789
+123456789
+>>> 123456789909876543221234567890
+123456789909876543221234567890
+>>> xdfyuyfxdftyuuyfdxdftyuyfxfyufcxfyuyfc
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'xdfyuyfxdftyuuyfdxdftyuyfxfyufcxfyuyfc' is not defined
+>>> name = "Rishith Sahu"
+>>> print(type(name))
+<class 'str'>
+>>>

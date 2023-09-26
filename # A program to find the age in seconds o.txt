@@ -1,0 +1,15 @@
+# A program to find the age in seconds of a person.
+
+import datetime
+
+# First we get user's inputs.
+uday = int(input("Enter day(integer) "))
+umonth = int(input("Enter month "))
+uyear = int(input("Enter year "))
+
+#Then get current inputs.
+cmonth = datetime.date.today().month
+cday = datetime.date.today().day
+cyear = datetime.date.today().year
+
+# Calculation.

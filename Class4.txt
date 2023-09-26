@@ -1,0 +1,57 @@
+PS C:\Users\Admin> pythoon
+pythoon : The term 'pythoon' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ pythoon
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (pythoon:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Admin> python
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print("Welcome to","python", sep = '@')
+Welcome to@python
+>>> n1 = 3
+>>> n2 = 6
+>>> format(n1/n2)
+'0.5'
+>>> print("n1 is {0} n2 is {1}" .format(n1.n2))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'int' object has no attribute 'n2'
+>>> print("n1 is {0} n2 is {1}" .format(n1,n2))
+n1 is 3 n2 is 6
+>>> print("Hello World\n")
+Hello World
+
+>>> print("Hello World\n")
+Hello World
+
+>>> print("Hello World\n\n")
+Hello World
+
+
+>>> print("\nHello World")
+
+Hello World
+>>> print("\nHello World\n")
+
+Hello World
+
+>>> first_name = input(First Name? )
+  File "<stdin>", line 1
+    first_name = input(First Name? )
+                       ^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> Rishith
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Rishith' is not defined
+>>> first_name = input("First Name? ")
+First Name? Rishith
+>>> last_name = input("Last name? ")
+Last name? Sahu
+>>> print("Your name is {} {}" .format(last_name,first_name))
+Your name is Sahu Rishith
+>>>

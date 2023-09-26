@@ -1,0 +1,7 @@
+About variables 
+-->Case Sensitive
+-->No spaces
+-->First letter cannot be a digit
+-->Only one special symbol (_)
+-->Cannot start with underscore
+-->Cannot be a keyword

@@ -1,0 +1,108 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Admin> python
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> help
+Type help() for interactive help, or help(object) for help about object.
+>>> help(input)
+Help on built-in function input in module builtins:
+
+input(prompt='', /)
+    Read a string from standard input.  The trailing newline is stripped.
+
+    The prompt string, if given, is printed to standard output without a
+    trailing newline before reading input.
+
+    If the user hits EOF (*nix: Ctrl-D, Windows: Ctrl-Z+Return), raise EOFError.
+    On *nix systems, readline is used if available.
+
+>>> name = input(Whats your name? )
+  File "<stdin>", line 1
+    name = input(Whats your name? )
+                 ^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> name = input("Whats your name? ")
+Whats your name? Rishith
+>>> age = input("Whats your age? ")
+Whats your age? 18
+>>> roll_no = input("What is your roll number? ")
+What is your roll number? PES2202300018
+>>> print(13/5)
+2.6
+>>> print(12/5)
+2.4
+>>> x = input('''Name is 1
+... Age is 2
+... Roll Number is 3''')
+Name is 1
+Age is 2
+Roll Number is 32
+>>> format(20/3,'.2f')
+'6.67'
+>>> 20/3
+6.666666666666667
+>>> '''You can use format to change the no of digits after decimal'''
+'You can use format to change the no of digits after decimal'
+>>> print("one \n two")
+one
+ two
+>>> ''' \n is newline'''
+' \n is newline'
+>>> ''' Anything in double quotes will be printed out as it is'''
+' Anything in double quotes will be printed out as it is'
+>>> print("Red","Green",sep = '@')
+Red@Green
+>>> print("Red","Green",sep = '@',end='!')
+Red@Green!>>> sep = '*'
+>>> print("Red","Green",sep ='_')
+Red_Green
+>>> print(sep)
+*
+>>> ''' Sep is seen as _ in the print function only'''
+' Sep is seen as _ in the print function only'
+>>> print("Red","Green",sep)
+Red Green *
+>>> print(sep,sep = '_')
+*
+>>> format("Hello",'<20')
+'Hello               '
+>>> '''The '<x' makes sure that the printed function has only x digits '''
+"The '<x' makes sure that the printed function has only x digits "
+>>> adress = input("Whats your adress? ")
+Whats your adress? Bangalore
+>>> print(name\t, age\t,roll_no\t,adress)
+  File "<stdin>", line 1
+    print(name\t, age\t,roll_no\t,adress)
+               ^
+SyntaxError: unexpected character after line continuation character
+>>> print("Student Details : \n",name, age,roll_no,adress)
+Student Details :
+ Rishith 18 PES2202300018 Bangalore
+>>> print("Student Details : \t",name, age,roll_no,adress)
+Student Details :        Rishith 18 PES2202300018 Bangalore
+>>> print("Student Details : ",name, age,roll_no,adress)
+Student Details :  Rishith 18 PES2202300018 Bangalore
+>>> print("Student Details :",name, age,roll_no,adress)
+Student Details : Rishith 18 PES2202300018 Bangalore
+>>> print("Student Details :",name, age,roll_no,adress)
+Student Details : Rishith 18 PES2202300018 Bangalore
+>>>
+>>>
+>>>
+>>>
+>>> 2**3**3
+134217728
+>>> 2**9
+512
+>>> 2**27
+134217728
+>>> float(9)
+9.0
+>>> '''Python takes an input as a string only
+... and the we cannot perform arithmatic on it'''
+'Python takes an input as a string only\nand the we cannot perform arithmatic on it'
+>>> ''' Use int(input())for type conversion''''
