@@ -4,3 +4,4 @@ class Users:
         self.model = m
         self.price = p
 User_Instance = {"R8",8300000}
+# This seems to be working
