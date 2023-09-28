@@ -1,5 +1,5 @@
 # Python
-class Users:
+class User:
     def __init__(self,name,address,ph_no,balance):
         self.username = name
         self.address = address
