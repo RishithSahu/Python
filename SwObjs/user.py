@@ -5,4 +5,4 @@ class User:
         self.address = address
         self.Phone_No = ph_no
         self.Acc_Balance = balance
-User_Instance = Users("Rishith Sahu","Hoodi",9448028394,50000000)
+User_Instance = User("Rishith Sahu","Hoodi",9448028394,50000000)
