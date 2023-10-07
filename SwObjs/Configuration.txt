@@ -1,0 +1,16 @@
+User_Name = Rishith Sahu
+address = Hoodi
+ph_no = 9448028394
+
+t1 = 20
+t2 = 30
+t3 = 40
+t4 = 50
+t5 = 10
+t6 = 100
+t7 = 70
+t8 = 90
+t9 = 80
+t10 = 60
+
+balance = 500000

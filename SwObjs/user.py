@@ -4,7 +4,7 @@ class User:
         self.username = name
         self.address = address
         self.Phone_No = ph_no
-User_Instance = User("Rishith Sahu","Hoodi",9448028394)
+
 
 class Transactions:
     def __init__(self,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10):
@@ -18,10 +18,10 @@ class Transactions:
         self.t8 = t8
         self.t9 = t9
         self.t10 = t10
-List_of_Transactions = Transactions(1,2,3,4,5,6,7,8,9,10)
+
 
 
 class Balance:
     def __init__(self,balance):
         self.Balance = balance
-Total_Balance = Balance(5000000)
+
