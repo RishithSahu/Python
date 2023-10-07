@@ -7,21 +7,17 @@ class User:
 
 
 class Transactions:
-    def __init__(self,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10):
-        self.t1 = t1
-        self.t2 = t2
-        self.t3 = t3
-        self.t4 = t4
-        self.t5 = t5
-        self.t6 = t6
-        self.t7 = t7
-        self.t8 = t8
-        self.t9 = t9
-        self.t10 = t10
-
-
-
-class Balance:
-    def __init__(self,balance):
-        self.Balance = balance
-
+    def __init__(self,Date_Value_Date,narration,debit,credit,total_balance):
+        self.Date = Date_Value_Date
+        self.Narration = narration
+        self.Debit = debit
+        self.Credit = credit
+        self.Total_Balance = total_balance
+        
+class Account_Details:
+    def __init__(self,acc_no,totalbalance,unclearbal,MODbal,currency):
+        self.Account_number = acc_no
+        self.Total_Balance = totalbalance
+        self.Uncleared_balance = unclearbal
+        self.MOD_Balance = MODbal
+        self.Currency = currency

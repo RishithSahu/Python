@@ -13,4 +13,17 @@ t8 = 90
 t9 = 80
 t10 = 60
 
-balance = 500000
+Total_Balance = 500000
+
+
+
+
+
+
+Account Number = 00000037540517917
+
+Available Balance = 3,478.00
+Uncleared balance = 0.00
+MOD Balance = 0.00
+
+Currency = INR
