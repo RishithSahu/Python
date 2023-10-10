@@ -2,25 +2,15 @@ User_Name = Rishith Sahu
 address = Hoodi
 ph_no = 9448028394
 
-t1 = 20
-t2 = 30
-t3 = 40
-t4 = 50
-t5 = 10
-t6 = 100
-t7 = 70
-t8 = 90
-t9 = 80
-t10 = 60
+Date  = 9/11/23
+Narration = "Rishith Sahu used it."
+Debit = 200
+Credit = 100
+Total_Balance = 3400
 
 Total_Balance = 500000
 
-
-
-
-
-
-Account Number = 00000037540517917
+Account_number = 00000037540517917
 
 Available Balance = 3,478.00
 Uncleared balance = 0.00

@@ -5,7 +5,6 @@ class User:
         self.address = address
         self.Phone_No = ph_no
 
-
 class Transactions:
     def __init__(self,Date_Value_Date,narration,debit,credit,total_balance):
         self.Date = Date_Value_Date
