@@ -1,4 +1,4 @@
-# Library functions math and random.
+# Library functions math.
 import math
 
 # print(dir(math))
