@@ -6,6 +6,6 @@ for i in range(0,3):
     
     for j in range(0,3):
         list[i][j] = int(list[i][j])
-        list2.append(list[i][0]+list[i][1]+list[i][2])
+        list2.append(list[i][j]+list[i][1]+list[i][2])
 print(list2)
     
