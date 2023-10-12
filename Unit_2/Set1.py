@@ -10,6 +10,11 @@ pop()---> removes a random element
 no repetation----> print(s1*3)[Error]
 
 '''
+print(hash(12))
+x = 34
+y = (2,3)
+print(hash(x))
+print(hash(y))
 
 list = [1,2,3,4,5]
 tup = 11,12,13,14
