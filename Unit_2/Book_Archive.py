@@ -20,23 +20,21 @@ print('No. of languages = ',len(langs))
 lang_book={}
 
 for data in books_data.splitlines():
-
-d=data.split()
-
-lang,name=d[0],d[1]
-
-if lang not in lang_book:
-
-lang_book[lang]=set()
-
-lang_book[lang].add(name)
-
+    d=data.split()
+    lang,name=d[0],d[1]
+    if lang not in lang_book:
+       lang_book[lang]=set()
+       lang_book[lang].add(name)
 print(lang_book)
-
 for lang in lang_book:
+    print(lang,"--->")
+    for name in lang_book[lang]:
+        print("\t",name)
 
-print(lang,"--->")
 
-for name in lang_book[lang]:
 
-print("\t",name)
+
+
+
+
+
