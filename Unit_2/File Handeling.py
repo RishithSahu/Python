@@ -1,4 +1,5 @@
-#                                            File Handeling
+#                                            FILE HANDELING
+
 ''' Python3 demo.py 2 3   -->(command line argument)
 Using input() function.
 These input types are limited therefore we need file handeling,
