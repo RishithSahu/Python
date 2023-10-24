@@ -6,7 +6,7 @@ print(a)
 b = []
 print(b)
 # Hetrogenous List
-c = [1,1.23,"Banna"]
+c = [1,1.23,"Bannana"]
 print(c)
 # A list of Fruits, with duplicate entry(allowed)
 fruits = ["apple","banana","mango","orange","apple"]
