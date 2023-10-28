@@ -3,6 +3,6 @@ attendance = int(input("No. of days present "))
 conduct = input("Conduct ")
 year = int(input("Which year?"))
 if attendance >= 80 and  conduct == 'good' :
-    print("Hallticket")
-if year == 2023:
-    print("Be issued an hallticket.")
+    print("Hallticket for",year)
+else:
+    print("Attendace is less or conduct is not good")
