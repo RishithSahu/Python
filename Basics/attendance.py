@@ -5,4 +5,4 @@ year = int(input("Which year?"))
 if attendance >= 80 and  conduct == 'good' :
     print("Hallticket for",year)
 else:
-    print("Attendace is less or conduct is not good")
+    print("Attendace is less or conduct is not good Hallticket cannot be issued")
