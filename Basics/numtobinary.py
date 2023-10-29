@@ -1,9 +1,9 @@
-# Write a program from decimal to binary.
+# Write a program to convert decimal to binary.
 
 num=int(input("Enter a number = "))
-res =""
+result =""
 while num!=0:
-	rem=num%2
+	remain=num%2
 	num=num//2
-	res=str(rem)+res
-print("Binary number is = ",res)
+	result=str(remain)+result
+print("Binary number is = ",result)
