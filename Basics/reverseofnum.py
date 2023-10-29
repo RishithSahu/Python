@@ -5,7 +5,7 @@ reverse = 0
 if num == 0:
      print("Number is 0")
 
-while (num!=0):    # This loop will run until the number is not equal to 0.
+while (num!=0):    # This loop will run until num is not equal to 0.
      rem=num%10
      num//=10
      reverse=reverse*10+rem
