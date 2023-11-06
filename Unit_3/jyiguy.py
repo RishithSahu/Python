@@ -1,5 +1,5 @@
 import csv
-with open("Emplst.csv",mode = 'w') effefas file:         # File is a file handeler
+with open("Emplst.csv",mode = 'w') as file:         # File is a file handeler
     w = csv.writer(file)
     # print(type(w))
     w.writerow(["Emp name","Emp salary","Emp age"])
@@ -16,4 +16,4 @@ with open("Emplst.csv",'r') as file1:
     data = list(r)
     for row in data:
         for col in row:
-            print(col,"\t",)
+            print(col,"\t")
