@@ -59,7 +59,7 @@ print(x)
 y = x.copy()
 print(y)
 # .clear will empty the list(no try)
-print(x.clear)
+print(x.clear())
 # .sort() will sort in acending order(Only for integers)
 y = [1,2,0,4,6,7,10,9,3,5,8]
 y.sort()

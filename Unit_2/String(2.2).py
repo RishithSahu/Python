@@ -13,4 +13,6 @@ print(ord(max(str1)))
 #### Starts with 3 parameters ####
 print(str1.startswith("yt",1,4)) # startswith selects 'ython' then checks if it starts with yt
 print(str1.endswith("e"))
-print(str1.startswith("n",-1,-4)) # Dunno how to get true
+print(str1[-1])
+print(str1.startswith("u",-4,-1)) # Dunno how to get true(You a can get true if it is from
+                                  # 4 --> -1 means u --> e other way around does not work)

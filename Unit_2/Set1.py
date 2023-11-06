@@ -24,6 +24,7 @@ for i in se1:
     print(i)
 se1.add(tup)     # Only 1 argument
 print(se1)
+se1 = {1,2,3,4,5,6,8.2344,9,10}
 # se1.add(list)  A list is not hashable(Only immutable things can be added) 
 print(len(se1))
 print(max(se1))

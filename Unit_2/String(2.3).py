@@ -10,11 +10,11 @@ print(s3.islower())
 
 print(s3.isalpha()) # Alphabet
 print(s3.isalnum()) # Numeric
-print(s1.isdigit()) # Digit in the form of a string
+print(s1.isdigit()) # Digit in the form of a string(At least one charecter)
 
 print(4*s3)
 print("1234 "+s3+" Lets go")
-# isspacce()
+# isspace()    Will check if there is only space
 print(s3.ljust(30,'#'))
 print(s3.rjust(30,'#'))
 print(s3.center(30,' '))

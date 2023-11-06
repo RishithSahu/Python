@@ -1,7 +1,7 @@
 # Printing every element reverse
 t1 = 1,2,3,"Python",5
 print(t1[::-1])
-print(t1[-5:-1])
+print(t1[-5:-1])  # do not use this upper one is better
 
 
 # nested tuple
