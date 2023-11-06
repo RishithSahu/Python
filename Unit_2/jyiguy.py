@@ -1,0 +1,11 @@
+import csv
+with open("Emplst.csv",mode = 'w')as file:         # File is a file handeler
+    w = csv.writer(file)
+    # print(type(w))
+    w.writerow(["Emp name","Emp salary","Emp age"])
+    for i in range(2):
+        Emp_name = input("Your name : ")
+        Emp_salary = int(input("Your salary : "))
+        Emp_age = int(input("Your age : "))
+        w.writerow([Emp_name,Emp_salary,Emp_age])
+print("Records created sucessfully!")
