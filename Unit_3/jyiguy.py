@@ -1,5 +1,5 @@
 import csv
-with open("Emplst.csv",mode = 'w') as file:         # File is a file handeler
+with open("Employee_list.csv",mode = 'w') as file:         # File is a file handeler
     w = csv.writer(file)
     # print(type(w))
     w.writerow(["Emp name","Emp salary","Emp age"])
@@ -11,7 +11,7 @@ with open("Emplst.csv",mode = 'w') as file:         # File is a file handeler
 print("Records created sucessfully!")
 
 # For reading csv file
-with open("Emplst.csv",'r') as file1:
+with open("Employee_list.csv",'r') as file1:
     r = csv.reader(file1)
     data = list(r)
     for row in data:

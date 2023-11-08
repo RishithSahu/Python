@@ -3,6 +3,23 @@
 
 # PHYSICS CYCLE
 
+""" 
+1) Write a program that takes the number of rows 'n' as input from the user and prints a number
+pattern in increasing order as shown below.If n is 5, the expected pattern is,
+1
+2 3
+4 5 6
+11 8 9 10
+11 12 13 14 15
+"""
+
+# n = int(input("Enter the number of rows: "))
+# num = 1
+# for i in range(1, n + 1):
+#     for j in range(i):
+#         print(num, end=" ")
+#         num += 1
+#     print()
 
 """
 2) Write a program that takes the number of rows 'n' as input from the user and prints a diamond
@@ -28,56 +45,6 @@ expected pattern is,
 # for i in range(1, n + 1):
 #     print(" " * abs(t - i), end="")
 #     print("*" * ((t - abs(t - i)) * 2 - 1))
-
-
-"""
-11) Write a Python program that takes two strings as inputs from the user and checks if one string
-is a rotation of another string. For example, "waterbottle" is a rotation of "erbottlewat". Your
-program should print 'Y' if one string is a rotation of the other, and 'N' if it is not.
-"""
-
-# s1 = input("Enter the first string: ")
-# s2 = input("Enter the second string: ")
-
-# if len(s1) != len(s2):
-#     print("N")
-# else:
-#     for i in range(len(s1)):
-#         s2 = s2[i:] + s2[:i]
-#         if s2 == s1:
-#             print("Y")
-#             break
-#     else:
-#         print("N")
-
-# OR
-
-# n = input()
-# rn = input()
-# newn = n*2
-# if rn in newn:
-#     print("Y")
-# else:
-#     print("N")
-
-
-""" 
-1) Write a program that takes the number of rows 'n' as input from the user and prints a number
-pattern in increasing order as shown below.If n is 5, the expected pattern is,
-1
-2 3
-4 5 6
-11 8 9 10
-11 12 13 14 15
-"""
-
-# n = int(input("Enter the number of rows: "))
-# num = 1
-# for i in range(1, n + 1):
-#     for j in range(i):
-#         print(num, end=" ")
-#         num += 1
-#     print()
 
 """ 
 3) Write a program that calculates and prints the Least Common Multiple (LCM) of two
@@ -140,9 +107,7 @@ diagonal (top-left to bottom-right) and the secondary diagonal (top-right to bot
 
 # n = int(input("Enter the number of rows: "))
 
-# mat = [
-#     [int(input(f"Enter the element at {i},{j}: ")) for j in range(n)] for i in range(n)
-# ]
+# mat = [int(input("Enter the element at {i},{j}: ")) for j in range(n)] for i in range(n)
 # print(mat)
 # d1, d2 = 0, 0
 # for i in range(n):
@@ -246,6 +211,36 @@ the output would be "testtest" as the sub_str has been repeated twice.
 #     )
 # )
 # print(d[max(d.keys())])
+
+"""
+11) Write a Python program that takes two strings as inputs from the user and checks if one string
+is a rotation of another string. For example, "waterbottle" is a rotation of "erbottlewat". Your
+program should print 'Y' if one string is a rotation of the other, and 'N' if it is not.
+"""
+
+# s1 = input("Enter the first string: ")
+# s2 = input("Enter the second string: ")
+
+# if len(s1) != len(s2):
+#     print("N")
+# else:
+#     for i in range(len(s1)):
+#         s2 = s2[i:] + s2[:i]
+#         if s2 == s1:
+#             print("Y")
+#             break
+#     else:
+#         print("N")
+
+# OR
+
+# n = input()
+# rn = input()
+# newn = n*2
+# if rn in newn:
+#     print("Y")
+# else:
+#     print("N")
 
 """ 
 12) Write a Python program that takes a string as input, finds and prints all the unique substrings
