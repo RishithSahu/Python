@@ -9,9 +9,9 @@ def gen():
     yield 'D'
 g = gen()
 # print(g)         # this prints the type
-# for i in range(1000000000000000000000000000000):
-#    print("Bru"+)
+# for i in range(100):
+#    print("Bru"+'h'*i)
 # g = (x for x in range(10000))
 # while True:
-#    print(next(g))
+print(next(g))
 print(next(g))
