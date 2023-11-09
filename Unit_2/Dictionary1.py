@@ -13,7 +13,7 @@ print(dic.values())
 
 employee = {}
 for i in range(1):
-    name = input("Enter name ")    # The name has to be name
+    name = input("Enter name ")    # The name has to be the name of the employee.
     salary = input("Enter Salary ")
     employee[name] = salary
 print(employee)
