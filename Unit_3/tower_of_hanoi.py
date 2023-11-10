@@ -6,5 +6,5 @@ def tower(n,src,aux,dest):
         return tower(n-1,src,dest,aux)
     print("move disk",n,"from source",src,"to destination",dest)
     tower(n-1,aux,src,dest)
-    n = int(input("Enter the number of disks : "))
-    tower(n,'A','B','C')
+n = int(input("Enter the number of disks : "))
+tower(n,'A','B','C')
