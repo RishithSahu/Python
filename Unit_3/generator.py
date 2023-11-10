@@ -1,4 +1,4 @@
-#                                             Generator
+#                                             GENERATOR
 # Used to generate values
 # yield and next   are the keywords
 # It saves a ton + ton of memory and improves performance
