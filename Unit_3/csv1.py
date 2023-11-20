@@ -16,4 +16,4 @@ with open("Employee_list.csv",'r') as file1:
     data = list(r)
     for row in data:
         for col in row:
-            print(col,"\t")
+           if 
