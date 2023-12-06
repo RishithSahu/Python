@@ -51,8 +51,28 @@ with open("D:\Rishith\Python\Mini Project\Library_Database_Manager_Studentmaster
         for j in i:
           if j == SRN:
             borrowed += 1
-    x = [sl_no, SRN, name, card, borrowed]
+        class Book_Record:
+          def __init__(self,sl_no, SRN, name, card, borrowed):
+            self.S_no = sl_no
+            self.SRN = SRN
+            self.name = name
+            self.card = card
+            self.borrowed = borrowed
+    x = [Book_Record(sl_no, SRN, name, card, borrowed)]
     STDrow.append(x)
     print()
   csvwriter.writerows(STDrow)
   print("Database Studentmaster Created.")
+
+
+
+
+
+
+
+
+
+
+
+
+
