@@ -1,4 +1,4 @@
-#                                             RECURSION
+#                               RECURSION
 '''When the same function calls itself it is called a recursive function.
 It reduces the length of the code.
 

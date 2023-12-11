@@ -2,7 +2,7 @@
 
 def tower(n,src,aux,dest):
     if n == 1:
-        print("Move disk 1 from source",src,"To destination",dest)
+        print("Move disk 1 from ",src,"To ",dest)
         return tower(n-1,src,dest,aux)
     print("move disk",n,"from source",src,"to destination",dest)
     tower(n-1,aux,src,dest)
