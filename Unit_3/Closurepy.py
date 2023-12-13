@@ -2,7 +2,7 @@
 '''
 
    A closure is a nested function which has access to a free
-   variable from an enclosing function thay has finished its execution.
+   variable from an enclosing function that has finished its execution.
 
    Its charecterstics are : 
    - it is a nested function.

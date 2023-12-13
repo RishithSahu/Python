@@ -13,5 +13,7 @@ def calc(a,b):
         return a-b
     elif operator == "d":
         return a/b
+    else:
+        return "Invalid operator"
     
 print(calc(12,34))
