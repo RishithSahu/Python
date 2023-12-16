@@ -41,10 +41,14 @@ class Trianlge(Shape):
         self.height = height
     def area(self):
         return 0.5 * self.base * self.height
-    
+
+def calc_area(Shape):
+    return Shape.area()
+
 c = Circle(5)
-print(c.area())
 r = Rectangle(10, 20)
-print(r.area())
 t = Trianlge(10, 20)
-print(t.area())
+
+print(calc_area(c))
+print(calc_area(r))
+print(calc_area(t))

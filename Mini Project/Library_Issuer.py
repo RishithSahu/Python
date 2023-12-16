@@ -2,7 +2,6 @@ import tkinter
 from tkinter import *
 from tkinter import messagebox
 import sqlite3
-from Library_Database_Graphics import book, student
 
 root = tkinter.Tk()
 root.resizable(False, False)
@@ -14,6 +13,14 @@ bk = sqlite3.connect('Bookmaster.db')
 bkk = bk.cursor()
 st = sqlite3.connect('Studentmaster.db')
 std = st.cursor()
+
+
+width = 620
+height = 200
+x = (root.winfo_screenwidth() // 2) - (width // 2)
+y = (root.winfo_screenheight() // 2) - (height // 2)
+root.geometry('{}x{}+{}+{}'.format(width, height, x, y))
+
 
 Label(root, text='WELCOME ADMIN', width=50).grid(row=0, column=1)
 Label(root, text='', width=50).grid(row=1, column=1)
@@ -71,16 +78,19 @@ def issueUpdate():
     st = sqlite3.connect('Studentmaster.db')
     std = st.cursor()
     data = getData()
-    if len(data) == 4:
-        isk.execute('''INSERT INTO Issuer (Student_Name, Student_SRN, Book_Title, Book_ISBN) VALUES (?,?,?,?)''',(data[0], int(data[1]), data[2], data[3]))
-        bkk.execute('''UPDATE Bookmaster SET Copies_Available = 'Borrowed' WHERE (Book_Title, Book_ISBN) = (?,?)''',(data[0], int(data[1])))
-        std.execute('''UPDATE Studentmaster SET Books_Borrowed = Books_Borrowed+1 WHERE (Student_Name, Student_SRN) = (?,?)''',(data[2], data[3]))
-        iss.commit()
-        bk.commit()
-        st.commit()
-        messagebox.showinfo(message='Issued.')
-    else:
-        messagebox.showerror(message='Book/Student not in list.')
+    try:
+       if len(data) == 4:
+          isk.execute('''INSERT INTO Issuer (Student_Name, Student_SRN, Book_Title, Book_ISBN) VALUES (?,?,?,?)''',(data[0], int(data[1]), data[2], data[3]))
+          bkk.execute('''UPDATE Bookmaster SET Copies_Available = 'Borrowed' WHERE (Book_Title, Book_ISBN) = (?,?)''',(data[0], int(data[1])))
+          std.execute('''UPDATE Studentmaster SET Books_Borrowed = Books_Borrowed+1 WHERE (Student_Name, Student_SRN) = (?,?)''',(data[2], data[3]))
+          iss.commit()
+          bk.commit()
+          st.commit()
+          messagebox.showinfo("Success",'Book Issued.')
+       else:
+          messagebox.showerror("Error",'Book/Student not in list.')
+    except:
+        messagebox.showerror("Value Error",'Please enter valid value.')
 
 def return_book(ISBN, SRN):
     bk = sqlite3.connect('Bookmaster.db')
@@ -88,15 +98,17 @@ def return_book(ISBN, SRN):
 
     bkk.execute("SELECT Copies_Available FROM Bookmaster WHERE Book_ISBN=?", (ISBN,))
     result = bkk.fetchone()
-
-    if result is not None:
-        copies_available = result[0]
-        bkk.execute("UPDATE Bookmaster SET Copies_Available=? WHERE Book_ISBN=?", (copies_available + 1, ISBN))
-        std.execute("UPDATE Studentmaster SET Book_Borrowed=NULL WHERE Student_SRN=?", (SRN,))
-        bk.commit()
-        messagebox.showinfo("Success", "Book returned successfully.")
-    else:
-        messagebox.showinfo("Error", "Book not found.")
+    try:
+       if result is not None:
+         copies_available = result[0]
+         bkk.execute("UPDATE Bookmaster SET Copies_Available=? WHERE Book_ISBN=?", (copies_available + 1, ISBN))
+         std.execute("UPDATE Studentmaster SET Book_Borrowed=NULL WHERE Student_SRN=?", (SRN,))
+         bk.commit()
+         messagebox.showinfo("Success", "Book returned successfully.")
+       else:
+         messagebox.showerror("Error", "Book not found.")
+    except:
+         messagebox.showerror("Value Error", "Please enter valid values.")
     bk.close()
 
 ISS = Button(root, text='ISSUE BOOK', padx=12, pady=2, command=issueUpdate).grid(row=7, column=0, columnspan=2)

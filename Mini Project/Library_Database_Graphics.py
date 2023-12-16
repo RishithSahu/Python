@@ -15,6 +15,41 @@ std = st.cursor()
 global copies
 copies = 10
 
+width = 620
+height = 320
+x = (root.winfo_screenwidth() // 2) - (width // 2)
+y = (root.winfo_screenheight() // 2) - (height // 2)
+root.geometry('{}x{}+{}+{}'.format(width, height, x, y))
+
+
+
+Label(root, text='WELCOME ADMIN', width=50).grid(row=0, column=1)
+Label(root, text='', width=50).grid(row=1, column=1)
+l1 = Label(root, text='Enter book title:', width=30).grid(row=2, column=0)
+l2 = Label(root, text='Enter book ISBN:', width=30).grid(row=3, column=0)
+l3 = Label(root, text='Enter book author:', width=30).grid(row=4, column=0)
+Label(root, text='', width=50).grid(row=5, column=1)
+e1 = Entry(root, width=50)
+e1.grid(row=2, column=1)
+e2 = Entry(root, width=50)
+e2.grid(row=3, column=1)
+e3 = Entry(root, width=50)
+e3.grid(row=4, column=1)
+
+l4 = Label(root, text='Enter student name:', width=30).grid(row=8, column=0)
+l5 = Label(root, text='Enter student SRN:', width=30).grid(row=9, column=0)
+l6 = Label(root, text='Enter card number:', width=30).grid(row=10, column=0)
+Label(root, text='', width=50).grid(row=13, column=1)
+Label(root, text='', width=50).grid(row=11, column=1)
+Label(root, text='', width=50).grid(row=7, column=1)
+e4 = Entry(root, width=50)
+e4.grid(row=8, column=1)
+e5 = Entry(root, width=50)
+e5.grid(row=9, column=1)
+e6 = Entry(root, width=50)
+e6.grid(row=10, column=1)
+
+
 # Create database
 # Comment if already created
 # """
@@ -66,45 +101,26 @@ class student:
         st.close()
 
 def createBook():
-    Book = book(title=e1.get(), ISBN=int(e2.get()), author=e3.get(), copies='Available')
-    Book.update()
-    e1.delete(0, END)
-    e2.delete(0, END)
-    e3.delete(0, END)
+    try:
+        Book = book(title=e1.get(), ISBN=int(e2.get()), author=e3.get(), copies='Available')
+        Book.update()
+    except:
+        messagebox.showerror("Value Error",'Please enter valid values.')
+    finally:
+        e1.delete(0, END)
+        e2.delete(0, END)
+        e3.delete(0, END)
 
 def createStudent():
-    Student = student(name=e4.get(), SRN=e5.get(), cardNumber=int(e6.get()), count=0)
-    Student.update()
-    e4.delete(0, END)
-    e5.delete(0, END)
-    e6.delete(0, END)
-
-
-Label(root, text='WELCOME ADMIN', width=50).grid(row=0, column=1)
-Label(root, text='', width=50).grid(row=1, column=1)
-l1 = Label(root, text='Enter book title:', width=30).grid(row=2, column=0)
-l2 = Label(root, text='Enter book ISBN:', width=30).grid(row=3, column=0)
-l3 = Label(root, text='Enter book author:', width=30).grid(row=4, column=0)
-Label(root, text='', width=50).grid(row=5, column=1)
-e1 = Entry(root, width=50)
-e1.grid(row=2, column=1)
-e2 = Entry(root, width=50)
-e2.grid(row=3, column=1)
-e3 = Entry(root, width=50)
-e3.grid(row=4, column=1)
-
-l4 = Label(root, text='Enter student name:', width=30).grid(row=8, column=0)
-l5 = Label(root, text='Enter student SRN:', width=30).grid(row=9, column=0)
-l6 = Label(root, text='Enter card number:', width=30).grid(row=10, column=0)
-Label(root, text='', width=50).grid(row=13, column=1)
-Label(root, text='', width=50).grid(row=11, column=1)
-Label(root, text='', width=50).grid(row=7, column=1)
-e4 = Entry(root, width=50)
-e4.grid(row=8, column=1)
-e5 = Entry(root, width=50)
-e5.grid(row=9, column=1)
-e6 = Entry(root, width=50)
-e6.grid(row=10, column=1)
+    try:
+        Student = student(name=e4.get(), SRN=e5.get(), cardNumber=int(e6.get()), count=0)
+        Student.update()
+    except:
+        messagebox.showerror("Value Error",'Please enter valid values.')
+    finally:
+        e4.delete(0, END)
+        e5.delete(0, END)
+        e6.delete(0, END)
 
 
 
