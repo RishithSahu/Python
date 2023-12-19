@@ -5,7 +5,7 @@ import sqlite3
 
 root = tkinter.Tk()
 root.resizable(False, False)
-root.title('Library Management System - Issue/Return')
+root.title('LIBDAT - Issue/Return')
 
 iss = sqlite3.connect('Issuer.db')
 isk = iss.cursor()
@@ -40,15 +40,15 @@ e4.grid(row=5, column=1)
 
 # Create database
 # Comment if already created
-# """
-# create_Issuer = ''' CREATE TABLE Issuer (
-#     Student_Name VARCHAR(255),
-#     Student_SRN VARCHAR(255),
-#     Book_Title VARCHAR(255),
-#     Book_ISBN INT
-# )'''
-# isk.execute(create_Issuer)
-# """
+"""
+create_Issuer = ''' CREATE TABLE Issuer (
+    Student_Name VARCHAR(255),
+    Student_SRN VARCHAR(255),
+    Book_Title VARCHAR(255),
+    Book_ISBN INT
+)'''
+isk.execute(create_Issuer)
+"""
 
 def getData():
     countIndex = 0
@@ -81,7 +81,7 @@ def issueUpdate():
     try:
        if len(data) == 4:
           isk.execute('''INSERT INTO Issuer (Student_Name, Student_SRN, Book_Title, Book_ISBN) VALUES (?,?,?,?)''',(data[0], int(data[1]), data[2], data[3]))
-          bkk.execute('''UPDATE Bookmaster SET Copies_Available = 'Borrowed' WHERE (Book_Title, Book_ISBN) = (?,?)''',(data[0], int(data[1])))
+          bkk.execute('''UPDATE Bookmaster SET Copies_Available = 'Borrowed' WHERE (Book_Title, Book_ISBN) = (?,?)''',(data[0], data[1]))
           std.execute('''UPDATE Studentmaster SET Books_Borrowed = Books_Borrowed+1 WHERE (Student_Name, Student_SRN) = (?,?)''',(data[2], data[3]))
           iss.commit()
           bk.commit()

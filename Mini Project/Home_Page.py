@@ -1,13 +1,17 @@
 import tkinter
 from tkinter import *
-from tkinter import font
+from tkinter import messagebox
+from PIL import Image,ImageTk
 
 root = tkinter.Tk()
-root.state('zoomed')
-root.title("Library Management System - Home Page")
+root.title("LIBDAT - Home Page")
 root.resizable(False, False)
-root.geometry("300x200")
-root.configure(background="black")
+root.configure(background='black')
+width = 540
+height = 295
+x = (root.winfo_screenwidth() // 2) - (width // 2)
+y = (root.winfo_screenheight() // 2) - (height // 2)
+root.geometry('{}x{}+{}+{}'.format(width, height, x, y))
 
 choice = "N"
 def database():
@@ -17,10 +21,11 @@ def issue():
      global choice
      choice = "I"
 
-buttonFont = font.Font(family='Helvetica', size=13, weight='bold')
-
-b1 = Button(root, text="Issue or Return Books", width=300, height=18, bg="white", fg="black",font=buttonFont, command=lambda: (issue(), root.destroy())).pack()
-b2 = Button(root, text="Update Library Database", width=300, height=20, bg="white", fg="black",font=buttonFont, command=lambda : (database(),root.destroy())).pack()
+logo = ImageTk.PhotoImage(Image.open("D:\Rishith\Python\Mini Project\logo.jpg"))
+Label(root, image=logo).grid(row=1, column=1)
+Label(root, text='LIBDAT', font=('Centaur', 25, 'bold'), bg='black', fg='white').grid(row=0, column=1)
+b1 = Button(root, text="Issue or Return Books", bg='powder blue', fg='black',font=('Helvetica', 10, 'bold'), padx=5, pady=10, command=lambda: (issue(), root.destroy())).grid(row=2, column=0)
+b2 = Button(root, text="Update Library Database", bg='light green', fg='black',font=('Helvetica', 10, 'bold'), padx=5, pady=10, command=lambda : (database(),root.destroy())).grid(row=2, column=2)
 root.mainloop()
 
 if choice == "I": 

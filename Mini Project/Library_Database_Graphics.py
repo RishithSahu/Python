@@ -5,7 +5,7 @@ import sqlite3
 
 root = tkinter.Tk()
 root.resizable(False, False)
-root.title('Library Management System - Update')
+root.title('LIBDAT - Update')
 
 bk = sqlite3.connect('Bookmaster.db')
 bkk = bk.cursor()
