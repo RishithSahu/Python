@@ -28,7 +28,7 @@ class Parent:
 class Child(Parent):
     def __init__(self):
         super().__init__()  # Call the parent class constructor
-        self.name = input("Enter your name: ")
+        self.name1 = input("Enter your name: ")
         print("Child")
 
 c = Child()

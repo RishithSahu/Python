@@ -19,4 +19,4 @@ print(list(map(len,lst)))
 # Usinf a map func. convert the list of strings to uppercase.
 
 
-print(list(map(lambda lst:lst.upper(), lst)))
+print(list(map(lambda x:x.upper(), lst)))

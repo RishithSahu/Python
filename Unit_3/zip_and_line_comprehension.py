@@ -13,15 +13,15 @@
    iterables into a single lazy iterator.
 '''
 
-# name = ['John', 'Peter', 'Mathew']
-# roll_no = [23, 45, 56]
-# mapped = list(zip(name, roll_no))
-# print(mapped)
+name = ['John', 'Peter', 'Mathew']
+roll_no = [23, 45, 56]
+mapped = list(zip(name, roll_no))
+print(mapped)
 
-# lst1 = [1,2,3,4,5]
-# lst2 = list(map(lambda x:x*x*x, lst1))
-# mapped = list(zip(lst1,lst2))
-# print(mapped)
+lst1 = [1,2,3,4,5]
+lst2 = list(map(lambda x:x*x*x, lst1))
+mapped = list(zip(lst1,lst2))
+print(mapped)
 
 '''                                 List comprehension
     It is a way to create a consise list in python.
@@ -53,19 +53,19 @@ print([(x,len(x)) for x in ['Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Chenna
 
 # Question 3: WAP to print a list which contains 1 to 10 and list 2 sholud contain even numbers from list 1.
 
-print([x**2 for x in range(1,11) if x%2==0]) 
+# print([x**2 for x in range(1,11) if x%2==0]) 
 
-lst1 = [1,2,3]
-lst2 = ['a','b','c']
-print([(lst1[x],lst2[y]) for x in range(len(lst1)) for y in range(len(lst2)) if x==y ])
+# lst1 = [1,2,3]
+# lst2 = ['a','b','c']
+# print([(lst1[x],lst2[y]) for x in range(len(lst1)) for y in range(len(lst2)) if x==y ])
 
-fruits = ['apple', 'banana', 'cherry', "kiwi", "mango", "orange", "watermelon", "grapes", "papaya", "pineapple"]
+# fruits = ['apple', 'banana', 'cherry', "kiwi", "mango", "orange", "watermelon", "grapes", "papaya", "pineapple"]
 # Question 4: WAP to print a list which contains a in the list of fruits.
 
-print([x for x in fruits if 'a' in x])
+# print([x for x in fruits if 'a' in x])
 
-# Question 5: WAP to print all numbers 1 to 100 if it is divisible by 2 and 5.
+# Question 5: WAP to print all numbers 1 to 100 if it    is divisible by 2 and 5.
 
-print([x for x in range(1,101) if x%2==0 and x%5==0])
+# print([x for x in range(1,101) if x%2==0 and x%5==0])
 
 # Question 6: WAP to take n and print n different values
