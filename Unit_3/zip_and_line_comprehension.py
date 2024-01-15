@@ -69,3 +69,6 @@ print([(x,len(x)) for x in ['Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Chenna
 # print([x for x in range(1,101) if x%2==0 and x%5==0])
 
 # Question 6: WAP to take n and print n different values
+
+# n = int(input())
+# print([x for x in range(1,n+1)])
