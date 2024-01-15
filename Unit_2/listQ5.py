@@ -6,4 +6,3 @@ for i in range(len(list)):
     list[i] = int(list[i])
     list[i] = list[i] + n
 print(list)
-    

@@ -13,7 +13,7 @@ print(s3.isalnum()) # Numeric
 print(s1.isdigit()) # Digit in the form of a string(At least one charecter)
 
 print(4*s3)
-print("1234 "+s3+" Lets go")
+print("1234 "+s3.lower+" Is The best bro!!")
 # isspace()    Will check if there is only space
 print(s3.ljust(30,'#'))
 print(s3.rjust(30,'#'))

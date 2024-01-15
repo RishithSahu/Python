@@ -17,6 +17,7 @@ for i in range(1):
     salary = input("Enter Salary ")
     employee[name] = salary
 print(employee)
+print(employee.keys())
 
 for ele in employee.items():
     print(ele)

@@ -11,4 +11,4 @@ while (num!=0):    # This loop will run until num is not equal to 0.
      reverse=reverse*10+rem
      print(reverse)
 
-print("Reverse of the number = ",reverse)
+print("Reverse of the number is ",reverse)

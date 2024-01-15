@@ -8,4 +8,4 @@ print(random.randrange(1,100,49))
 x=[1,2,3,4,5]
 random.shuffle(x)
 print(x)
-print(random.sample(x,1))
+print(random.sample(x,2))
